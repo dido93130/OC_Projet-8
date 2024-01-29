@@ -1,0 +1,45 @@
+@import './variables';
+
+.carousel{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 415px;
+    border-radius: 15px;
+    background-position: center;
+    background-size: cover;
+    width: 95%;
+    margin: 43px auto;
+    @media screen and (max-width: 650px){
+        height: 280px;  
+        margin: 20px auto;   
+    }
+    &_arrow{
+        position: absolute;
+        top: 50%;
+        height: 25%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        @media screen and (max-width: 650px){
+            height: 10%;
+        }
+        &:active{
+            transform: translateY(-50%) scale(0.9);
+        }
+        &_right{
+            right: 12px;
+        }
+        &_left{
+            left: 12px;
+        }
+    }
+    .slideCount{
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $color-primary;
+        font-weight: 500;
+        font-size: clamp(14px, 2vw, 18px);
+    }
+}

@@ -1,0 +1,23 @@
+@import './variables';
+
+.nav_list{
+    display: flex;              
+    gap: 50px;
+    color: black;
+    font-size: clamp(11px, 2.5vw, 24px);
+    text-transform: uppercase;
+    
+    @media screen and (max-width: 700px){
+        gap: 20px;
+    }
+    &_item{
+        
+        &_active{
+            position: relative;            
+            color: black;
+            transition: all 0.2s ease-in-out;
+            text-decoration: underline; 
+            
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import "./mixins";
+@import"./variables";
+
+.header{
+    @include flex(row, space-between, center);
+    height: 68px;
+    max-width: 95%;
+    padding: 0 5px;
+    margin: 10px auto 25px auto;
+    @media screen and (max-width: 900px){
+        height: 40px;
+    }
+    img{
+        height: 60%;
+        @media screen and (max-width: 700px){
+            height: 48px;
+        }
+    }
+}
+
+
+.footer{
+    @include flex(column, space-between);    
+    width: 100%;
+    padding-top: 68px;
+    padding-bottom: 25px;
+    min-height: 230px;    
+    background-color: #000;
+    
+    &_copyright{        
+        text-align: center;        
+        color: $color-primary;
+        font-size: x-large;
+        position: relative;
+        bottom: 25px;
+        @media screen and (max-width: 500px){
+           position: relative;
+           bottom: 30px;
+           padding: 0 110px;
+           font-size: small;     
+        }
+    }    
+}

@@ -1,0 +1,147 @@
+@import './partials/base';
+@import './partials/mixins';
+@import './partials/variables';
+@import './partials/banner';
+@import './partials/card';
+@import './partials/caroussel';
+@import './partials/collapse';
+@import './partials/gallery';
+@import './partials/header_footer';
+@import './partials/navbar';
+
+
+
+.home{
+    margin: 0 auto;
+}
+
+.apartment{
+    &_content{
+        @include flex(row, space-between, flex-start);
+        color: $color-secondary;
+        width: 95%;
+        margin: 0 auto;
+        @media screen and (max-width: 650px){
+            @include flex(column, space-between, flex-start);   
+            gap: 10px;   
+        }
+        &_infos{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: lighter;
+            font-size: 12px;
+            button{
+                display: inline;
+                padding: 5px 20px;                
+                margin-right: 10px;
+                cursor: pointer;
+                border-radius: 10px;
+                border: none;
+                color: $color-primary;
+                background-color: $color-secondary;
+                &:hover{
+                    box-shadow: 0 2px 8px rgb(0, 0, 0);
+                }
+            }
+            div{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;  
+            }
+            p{
+                color: #000;
+                font-size: 15px;
+            }
+        }
+        &_host{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            @media screen and (max-width: 650px){
+                width: 100%;
+                @include flex(row-reverse, space-between, center);     
+            }
+            div{
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                gap: 0 10px;
+                @media screen and (max-width: 500px){
+                    gap: 0 5px;   
+                }
+            }
+            &_name{
+                align-self: center;
+                flex-direction: column;
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+            &_stars{
+                display: flex;
+                gap: 10px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    @media screen and (max-width: 650px){
+                        width: 20px;
+                        height: 20px;  
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about_main{    
+    width: 95%;     
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+        min-height: calc(100vh - 516px);                  
+    }  
+    &_collapse{
+          margin: 40px auto;
+        @media screen and (max-width: 550px){           
+            margin: 32px auto;                       
+        }
+    }   
+}
+
+.notFound{
+    max-width: 95%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    color: $color-secondary;
+    &_infos{
+        @include flex(column, center, center);
+        min-height: calc(100vh - 399px);
+        @media screen and (max-width: 768px) {
+            min-height: calc(100vh - 300px);                  
+        }
+        &_title{
+            font-weight: 700;
+            font-size: 288px;
+            @media screen and (max-width: 768px) {
+                font-size: 140px;                    
+            }
+        }
+        &_content{
+            font-weight: 500;
+            font-size: clamp(20px, 4vw, 36px);
+            text-align: center;
+        }
+        &_return{
+            display: block;
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: clamp(12px, 2.5vw, 18px);
+        }
+    }
+}

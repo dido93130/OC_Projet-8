@@ -2,6 +2,7 @@
   "name": "kasa",
   "private": true,
   "version": "0.0.0",
+  "homepage":"https://dido93130.github.io/OC_Projet-8/",
   "type": "module",
   "scripts": {
     "dev": "vite",

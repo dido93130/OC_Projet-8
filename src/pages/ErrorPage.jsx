@@ -1,4 +1,5 @@
 // Importez le composant Header et le composant de lien de react-router-dom
+import React from 'react';
 import { Link } from 'react-router-dom';
 import '../sass/main.scss';
 

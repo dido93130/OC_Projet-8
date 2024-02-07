@@ -1,5 +1,4 @@
 // Importez les hooks React nécessaires pour la gestion de l'état, des effets, des paramètres d'URL et de la navigation
-/*import '../sass/apartment.scss'*/
 import '../sass/main.scss';
 import { useEffect, useState } from "react"; // useEffect et useState pour gérer l'état et les effets
 import { useParams, useNavigate } from "react-router-dom"; // useParams pour extraire les paramètres d'URL, useNavigate pour la navigation
